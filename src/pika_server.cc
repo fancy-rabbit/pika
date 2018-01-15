@@ -86,7 +86,7 @@ PikaServer::PikaServer() :
   pika_dispatch_thread_ = new PikaDispatchThread(ips, port_, worker_num_, 3000,
                                                  worker_queue_limit);
   pika_binlog_receiver_thread_ = new PikaBinlogReceiverThread(ips, port_ + 1000, 1000);
-  pika_hub_manager_ = new PikaHubManager(ips, port_ + 1100, 1000);
+  pika_hub_manager_ = new PikaHubManager(ips, port_ + 500, 1000);
   pika_heartbeat_thread_ = new PikaHeartbeatThread(ips, port_ + 2000, 1000);
   pika_trysync_thread_ = new PikaTrysyncThread();
   monitor_thread_ = new PikaMonitorThread();
