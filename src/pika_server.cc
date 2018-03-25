@@ -74,7 +74,7 @@ PikaServer::PikaServer() :
                          PIKA_MAX_WORKER_THREAD_NUM);
 
   std::set<std::string> ips;
-  if (g_pika_conf->network_interface().empty()) {
+  if (true || g_pika_conf->network_interface().empty()) {
     ips.insert("0.0.0.0");
   } else {
     ips.insert("127.0.0.1");
